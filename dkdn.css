@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:300");
+
+* {
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.login-page {
+  width: 360px;
+  padding-top: 8%;
+}
+
+.form {
+  background: #fff;
+  padding: 45px;
+  text-align: center;
+}
+
+.form input {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 15px;
+  border: none;
+  background: #f2f2f2;
+  font-size: 14px;
+}
+
+.form button {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  background: blue;
+  color: #fff;
+  font-size: 14px;
+
+  transition: 0.3s;
+}
+.message {
+  margin-top: 15px;
+  font-size: 12px;
+  color: #b3b3b3;
+}
+
+.message a {
+  color: black;
+  text-decoration: none;
+}
+
+.register-form {
+  display: none;
+}
+.form input::placeholder {
+  text-transform: capitalize;
+}
+
+body {
+    background: url(https://i.pinimg.com/1200x/cf/07/4e/cf074e69a6d961451047882b67a2e2ec.jpg);
+    background-position: center;
+    background-size: cover;
+}

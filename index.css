@@ -1,0 +1,172 @@
+
+
+
+/*navbar*/
+
+.navbar {
+  padding-top: 0;
+  padding-bottom: 0;
+  min-height: 56px;
+}
+
+.logo-gundam {
+  display: flex;
+  align-items: center;
+}
+
+.logo-gundam img {
+  height: 48px;
+  width: auto;
+  object-fit: contain;
+
+  border: 2px solid #000;
+  border-radius: 6px;
+  padding: 4px;
+
+  background-color: #fff;
+}
+
+.navbar {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+}
+
+/*carousel*/
+#carouselExampleIndicators {
+  width: 100%;
+
+  margin-bottom: 100px;
+}
+
+#carouselExampleIndicators .carousel-inner {
+  width: 100%;
+  height: 100%;
+}
+
+#carouselExampleIndicators img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background-color: #000;
+}
+
+/*  hot product */
+.product-box {
+  padding: 60px 30px;
+}
+.product-hot {
+  display: flex;
+  gap: 50px;
+}
+
+.product-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column; /* ⬅️ CÁI NÀY QUAN TRỌNG */
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 2px solid black;
+}
+.product-item img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.product-item:hover img {
+  transform: scale(1.08);
+}
+
+
+/* Ảnh */
+.product-item img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  display: block;
+}
+/* title */
+.tiltle {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 800;
+  text-align: center;
+
+  background: linear-gradient(90deg, #ff0000, #ffcc00, #00ffcc, #ff0000);
+  background-size: 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  animation: shine 3s linear infinite;
+}
+
+@keyframes shine {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 300%;
+  }
+}
+/* chữ trong box */
+.product-item h2 {
+  text-align: center;
+  margin-top: 10px;
+}
+.product-item h5 {
+  
+  text-align: center;
+  margin-top: auto;
+   color: #e74c3c;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.product-item button {
+  background: #0984e3;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  margin: 10px;
+  padding: 5px;
+  width: 120px;
+  height: 50px;
+}
+
+.product-item button {
+  display: block;
+  margin: 15px auto;
+}
+
+/*dòng mẫu sản phẩm*/
+
+.container-box {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  padding: 20px 0px;
+  background: #fff;
+  margin-top: 100px;
+  border: 2px solid black;
+  margin: 100px;
+}
+
+.container-item {
+  width: 150px;
+  height: auto;
+  border: 1px solid black;
+  overflow: hidden;
+}
+.container-item img {
+  transition: transform 0.3s ease;
+}
+.container-item img:hover {
+  transform: scale(1.1);
+}
