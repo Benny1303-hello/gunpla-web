@@ -65,7 +65,7 @@
 .product-item {
   flex: 1;
   display: flex;
-  flex-direction: column; /* ⬅️ CÁI NÀY QUAN TRỌNG */
+  flex-direction: column; 
   background: white;
   border-radius: 12px;
   overflow: hidden;
@@ -144,7 +144,11 @@
   display: block;
   margin: 15px auto;
 }
-
+.product-item a{
+  text-align: center;
+  text-decoration: none;
+  color: white;
+}
 /*dòng mẫu sản phẩm*/
 
 .container-box {
@@ -155,7 +159,7 @@
   background: #fff;
   margin-top: 100px;
   border: 2px solid black;
-  margin: 100px;
+  margin: 40px 190px;
 }
 
 .container-item {

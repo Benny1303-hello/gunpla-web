@@ -1,0 +1,40 @@
+.navbar {
+  padding-top: 0;
+  padding-bottom: 0;
+  min-height: 56px;
+}
+
+.logo-gundam {
+  display: flex;
+  align-items: center;
+}
+
+.logo-gundam img {
+  height: 48px;
+  width: auto;
+  object-fit: contain;
+
+  border: 2px solid #000;
+  border-radius: 6px;
+  padding: 4px;
+
+  background-color: #fff;
+}
+
+.navbar {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+}
+
+
+
+.container{
+    margin: 80px auto;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  padding: 25px;
+  border-radius: 8px;
+  border:0.5px solid black
+}

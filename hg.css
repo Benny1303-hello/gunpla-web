@@ -83,6 +83,12 @@
   height: 50px;
 }
 
+.product-item a{
+  color: white;
+  text-decoration: none;
+  text-align: center;
+}
+
 .product-item button {
   display: block;
   margin: 15px auto;
