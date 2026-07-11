@@ -13,9 +13,8 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
-<body>
+<body  data-id="7" data-title="RG" >
 
-    <body>
        <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
             <div class="logo-gundam"><img src="./love-the-gundam-channel-logo-v0-oaxjr1o3jivf1.webp" alt="logo"></div>
@@ -38,7 +37,7 @@
                             <li><a class="dropdown-item" href="mg.html">MG</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item"> <a class="nav-link" href="./dkdn.html">Đăng nhập</a>
+                    <li class="nav-item"> <a class="nav-link" href="./dkdn.html" id="login-link">Đăng nhập</a>
                     </li>
                     <li class="nav-item"> <a class="nav-link" href="./giohang.html">Giỏ Hàng</a>
                     </li>
@@ -62,8 +61,7 @@
                 </div>
                 <div class="buy">
                     <button><a href="...">Mua Ngay</a></button>
-                    <button><a href="...">Thêm vào giỏ hàng</a></button>
-                </div>
+<button id="add-cart">Thêm vào giỏ hàng</button>                </div>
             </div>
 
 
@@ -71,6 +69,11 @@
 
 
         </div>
+        <h2 class="related-title">Sản phẩm liên quan</h2>
+
+    <div class="related-products"></div>
+
+    <script src="./detail.js"></script>
         <footer class="footer">
             <div class="footer-wrap">
                 <div class="footer-left">
@@ -99,6 +102,7 @@
             </div>
         </footer>
 
-    </body>
+    <script src="./navbar.js"></script>
+</body>
 
 </html>

@@ -1,18 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hg</title>
-    <link rel="stylesheet" href="./hg.css">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Thông tin tài khoản</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./thongtincanhan.css">
 </head>
+
 <body>
-     <nav class="navbar navbar-expand-lg bg-body-tertiary">
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
             <div class="logo-gundam"><img src="./love-the-gundam-channel-logo-v0-oaxjr1o3jivf1.webp" alt="logo"></div>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -38,6 +37,10 @@
                     </li>
                     <li class="nav-item"> <a class="nav-link" href="./giohang.html">Giỏ Hàng</a>
                     </li>
+                    <li>
+                    <li class="nav-item"> <a class="nav-link" href="./thongtincanhan.html">Thông tin cá nhân</a>
+
+                    </li>
                 </ul>
                 <form class="d-flex" role="search"> <input class="form-control me-2" type="search" placeholder="Search"
                         aria-label="Search" /> <button class="btn btn-outline-success" type="submit">Search</button>
@@ -46,22 +49,52 @@
         </div>
     </nav>
 
+    <section class="profile-container">
 
-<div class="tiltle">
-    <h1>MG-Master-Grade</h1>
-</div>
+        <div class="profile-card">
 
-
-<div class="product-box">
-    <div class="product-hot filterable_cards">
-
-    </div>
-</div>
+            <h1>Thông Tin Cá Nhân</h1>
 
 
-    
 
-     <div class="container1">
+            <form>
+                <div class="name">
+                    <label>Họ và tên</label>
+                    <input id="fullName" class="form-control">
+                </div>
+
+                <div class="Email">
+                    <label>Email</label>
+                    <input id="email" class="form-control">
+                </div>
+
+                <div class="SDT">
+                    <label>Số điện thoại</label>
+                    <input id="phone" class="form-control">
+                </div>
+
+                <div class="address">
+                    <label>Địa chỉ</label>
+                    <input id="address" class="form-control">
+                </div>
+
+
+
+                <button type="button" class="btn btn-primary w-100" id="saveBtn">
+                    Cập Nhật Thông Tin
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+    <script src="./thongtincanhan.js"></script>
+
+
+    <div class="container1">
         <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
             <div class="col mb-3">
                 <a href="/" class="d-flex align-items-center mb-3 link-dark text-decoration-none">
@@ -98,10 +131,7 @@
 
 
         </footer>
-    </div>
-
-<script src="./mg.js"></script>
-    
 <script src="./navbar.js"></script>
 </body>
+
 </html>

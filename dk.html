@@ -13,24 +13,26 @@
   <div class="login-page">
     <div class="form">
       <form class="register-form">
-        <input type="text" placeholder="Username" required />
-        <input type="email" placeholder="Email address" required />
-        <input type="password" placeholder="Password" required />
-        <input type="password" placeholder="Confirm Password" required />
+   
+        <input type="text" id="username" placeholder="Username" required />
+        <input type="email" id="email" placeholder="Email address" required />
+        <input type="password" id="password" placeholder="Password" required />
+        <input type="password" id="confirmPassword" placeholder="Confirm Password" required />
 
-        <button style="color: white;">Create Account</button>
+        <button type="submit" style="color: white;">Create Account</button>
 
         <p class="message" style="color: red;">
-          Already have an account?
-          <a href="./dkdn.html">Log In</a>
-        <p class="message" style="color: red;">Forgot password? <a href="./quenpass.html">Reset password here</a></p>
-
+          Already have an account? <a href="./dkdn.html">Log In</a>
+        </p>
+        <p class="message" style="color: red;">
+          Forgot password? <a href="./quenpass.html">Reset password here</a>
         </p>
       </form>
-
     </div>
   </div>
 
+  <script src="./dk.js"></script>
+<script src="./navbar.js"></script>
 </body>
 
 </html>

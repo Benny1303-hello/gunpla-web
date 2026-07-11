@@ -14,7 +14,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+   <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
             <div class="logo-gundam"><img src="./love-the-gundam-channel-logo-v0-oaxjr1o3jivf1.webp" alt="logo"></div>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -36,9 +36,13 @@
                             <li><a class="dropdown-item" href="mg.html">MG</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item"> <a class="nav-link" href="./dkdn.html">Đăng nhập</a>
+                    <li class="nav-item"> <a class="nav-link" href="./dkdn.html" id="login-link">Đăng nhập</a>
                     </li>
                     <li class="nav-item"> <a class="nav-link" href="./giohang.html">Giỏ Hàng</a>
+                    </li>
+                    <li>
+                    <li class="nav-item"> <a class="nav-link" href="./thongtincanhan.html">Thông tin cá nhân</a>
+
                     </li>
                 </ul>
                 <form class="d-flex" role="search"> <input class="form-control me-2" type="search" placeholder="Search"
@@ -69,8 +73,8 @@
                 <div class="div">
                     <h2>Sản phẩm đã xem</h2>
                 </div>
-                <div class="product-box">
-                    <div class="product-hot">
+                <div class="product-box" >
+                    <div class="product-hot" id="cart-list">
                         <div class="product-item">
                             <img src="./10493508p_5d84305d9322499fa0027033af392dce_grande.jpg" alt="gundam">
                             <h2>Pg Exia</h2>
@@ -143,7 +147,7 @@
                 </ul>
             </div>
         </div>
-    </footer>
+        </footer>
 
 
 
@@ -159,6 +163,7 @@
 
 
 
+<script src="./navbar.js"></script>
 </body>
 
 </html>

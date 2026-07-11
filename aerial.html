@@ -13,10 +13,10 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
-<body>
+<body data-id="1" data-title="HG">
 
-    <body>
-         <nav class="navbar navbar-expand-lg bg-body-tertiary">
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
             <div class="logo-gundam"><img src="./love-the-gundam-channel-logo-v0-oaxjr1o3jivf1.webp" alt="logo"></div>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -38,7 +38,7 @@
                             <li><a class="dropdown-item" href="mg.html">MG</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item"> <a class="nav-link" href="./dkdn.html">Đăng nhập</a>
+                    <li class="nav-item"> <a class="nav-link" href="./dkdn.html" id="login-link">Đăng nhập</a>
                     </li>
                     <li class="nav-item"> <a class="nav-link" href="./giohang.html">Giỏ Hàng</a>
                     </li>
@@ -50,57 +50,63 @@
         </div>
     </nav>
 
-        <div class="container">
-            <div class="product-img"> <img src="./aerial.jpg" alt=""> </div>
-            <div class="product-info">
-                <h2>HG 1/144 Gundam Aerial – Bandai</h2>
-                <div class="class">Loại: Hg-High Grade</div>
-                <div class="price">500 ngàn VNĐ</div>
-                <div class="des">
-                    <p>HG Gundam Aerial là mẫu mô hình nổi bật với thiết kế hiện đại, sắc sảo, lấy cảm hứng từ series
-                        The Witch from Mercury. Bộ kit có độ chi tiết cao so với chuẩn HG, màu sắc chuẩn ngay khi ráp
-                        thẳng (snap-fit), phù hợp cho cả người mới lẫn người chơi lâu năm.. </p>
-                    <p>⭐⭐⭐⭐ (3.8/5 – 150 đánh giá)</p>
-                </div>
-                <div class="buy">
-                    <button><a href="...">Mua Ngay</a></button>
-                    <button><a href="...">Thêm vào giỏ hàng</a></button>
-                </div>
+    <div class="container">
+        <div class="product-img"> <img src="./aerial.jpg" alt=""> </div>
+        <div class="product-info">
+            <h2>HG 1/144 Gundam Aerial – Bandai</h2>
+            <div class="class">Loại: Hg-High Grade</div>
+            <div class="price">500 ngàn VNĐ</div>
+            <div class="des">
+                <p>HG Gundam Aerial là mẫu mô hình nổi bật với thiết kế hiện đại, sắc sảo, lấy cảm hứng từ series
+                    The Witch from Mercury. Bộ kit có độ chi tiết cao so với chuẩn HG, màu sắc chuẩn ngay khi ráp
+                    thẳng (snap-fit), phù hợp cho cả người mới lẫn người chơi lâu năm.. </p>
+                <p>⭐⭐⭐⭐ (3.8/5 – 150 đánh giá)</p>
             </div>
-
-
-
-
-
+            <div class="buy">
+                <button><a href="...">Mua Ngay</a></button>
+                <button><a href="...">Thêm vào giỏ hàng</a></button>
+            </div>
         </div>
-        <footer class="footer">
-            <div class="footer-wrap">
-                <div class="footer-left">
-                    © 2026 Your Company. All Rights Reserved.
-                </div>
 
-                <div class="footer-col">
-                    <h4>Main</h4>
-                    <ul>
-                        <li><a href="#">Trang chủ</a></li>
-                        <li><a href="#">Liên hệ</a></li>
-                        <li><a href="#">Mẫu mã</a></li>
-                    </ul>
-                </div>
 
-                <div class="footer-col">
-                    <h4>Contact</h4>
-                    <ul>
-                        <li><a href="#">Facebook</a></li>
-                        <li><a href="#">IG</a></li>
-                        <li><a href="#">Email</a></li>
-                        <li><a href="#">Twitter</a></li>
-                        <li><a href="#">Snapchat</a></li>
-                    </ul>
-                </div>
+
+
+
+    </div>
+    <h2 class="related-title">Sản phẩm liên quan</h2>
+
+    <div class="related-products"></div>
+
+    <script src="./detail.js"></script>
+    <footer class="footer">
+        <div class="footer-wrap">
+            <div class="footer-left">
+                © 2026 Your Company. All Rights Reserved.
             </div>
-        </footer>
 
-    </body>
+            <div class="footer-col">
+                <h4>Main</h4>
+                <ul>
+                    <li><a href="#">Trang chủ</a></li>
+                    <li><a href="#">Liên hệ</a></li>
+                    <li><a href="#">Mẫu mã</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <ul>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">IG</a></li>
+                    <li><a href="#">Email</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Snapchat</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+<script src="./navbar.js"></script>
+</body>
 
 </html>
