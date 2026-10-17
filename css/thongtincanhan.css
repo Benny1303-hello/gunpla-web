@@ -1,0 +1,100 @@
+.navbar {
+  padding-top: 0;
+  padding-bottom: 0;
+  min-height: 56px;
+}
+
+.logo-gundam {
+  display: flex;
+  align-items: center;
+}
+
+.logo-gundam img {
+  height: 48px;
+  width: auto;
+  object-fit: contain;
+
+  border: 2px solid #000;
+  border-radius: 6px;
+  padding: 4px;
+
+  background-color: #fff;
+}
+
+.navbar {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+}
+
+
+
+
+
+body{
+    background:#f3f3f3;
+    height: 50px;
+}
+
+.profile-container{
+    display:flex;
+    flex-direction:column;
+    margin-top:80px;
+    align-items:center;
+    padding:50px 20px;
+}
+
+.profile-card{
+    width:100%;
+    max-width:900px;
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.15);
+    margin-bottom:30px;
+}
+
+.role-label{
+    text-align:center;
+    font-weight:600;
+    color:#0984e3;
+    margin-bottom:25px;
+}
+
+/* Khu vực quản trị: mặc định ẩn, chỉ admin mới được JS bật lên */
+.admin-area{
+    display:none;
+}
+
+.user-table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:15px;
+}
+
+.user-table th,
+.user-table td{
+    border:1px solid #ddd;
+    padding:10px;
+    text-align:left;
+}
+
+.user-table th{
+    background:#f8f9fa;
+}
+
+.profile-card h1{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+label{
+    font-weight:600;
+    margin-bottom:5px;
+}
+
+.btn-primary{
+    margin-top:15px;
+}
