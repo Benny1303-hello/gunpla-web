@@ -29,6 +29,12 @@ if (searchForm) {
         const keyword = searchForm.querySelector('input[type="search"]').value.trim();
         sessionStorage.setItem("searchKeyword", keyword);
 
-        location.href = "/html/timkiem.html";
+        // Trang trong thư mục html/ thì timkiem.html nằm cùng thư mục, trang chủ (ở ngoài) thì phải vào html/
+        let trangTimKiem = "html/timkiem.html";
+        if (location.pathname.includes("/html/")) {
+            trangTimKiem = "timkiem.html";
+        }
+
+        location.href = trangTimKiem;
     });
 }

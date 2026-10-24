@@ -27,7 +27,7 @@ db.collection("products")
                         Giá: ${Number(product.price).toLocaleString()} VNĐ
                     </h5>
 
-                    <a href="/html/${product.link}">
+                    <a href="html/${product.link}">
                         <button>
                             Xem chi tiết
                         </button>
