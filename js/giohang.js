@@ -1,4 +1,3 @@
-// Mảng giỏ hàng của user đang đăng nhập (lấy từ Firestore)
 let cart = [];
 
 auth.onAuthStateChanged((user) => {
@@ -11,7 +10,6 @@ auth.onAuthStateChanged((user) => {
     loadCart();
 });
 
-// Lấy giỏ hàng từ Firestore rồi vẽ ra màn hình
 function loadCart() {
     const user = auth.currentUser;
 
@@ -26,7 +24,6 @@ function loadCart() {
     });
 }
 
-// Vẽ danh sách sản phẩm trong giỏ + tính tổng tiền
 function renderCart() {
     const cartItems = document.getElementById("cart-items");
     cartItems.innerHTML = "";
@@ -36,7 +33,7 @@ function renderCart() {
 
     for (let i = 0; i < cart.length; i++) {
         let item = cart[i];
-        let thanhTien = item.price * item.quantity;
+        let thanhTien = item.price * item.quantity; 
 
         total = total + thanhTien;
         soLuong = soLuong + item.quantity;
@@ -66,7 +63,6 @@ function renderCart() {
     document.getElementById("cart-count").textContent = soLuong + " sản phẩm";
     document.getElementById("cart-total").textContent = total.toLocaleString() + "đ";
 
-    // Giỏ trống thì hiện dòng "Giỏ hàng của bạn đang trống", có hàng thì ẩn đi
     if (cart.length === 0) {
         document.getElementById("cart-empty").style.display = "block";
     } else {
@@ -74,7 +70,6 @@ function renderCart() {
     }
 }
 
-// Lưu giỏ hàng hiện tại lên Firestore rồi vẽ lại
 function saveCart() {
     const user = auth.currentUser;
 
@@ -87,21 +82,18 @@ function saveCart() {
         });
 }
 
-// Bấm + thì amount = 1, bấm - thì amount = -1
-function doiSoLuong(index, amount) {
-    cart[index].quantity = cart[index].quantity + amount;
+function doiSoLuong(i, amount) {
+    cart[i].quantity = cart[i].quantity + amount;
 
-    // Giảm về 0 thì bỏ luôn sản phẩm khỏi giỏ
-    if (cart[index].quantity <= 0) {
-        cart.splice(index, 1);
+    if (cart[i].quantity <= 0) {
+        cart.splice(i, 1);
     }
 
     saveCart();
 }
 
-function xoaSanPham(index) {
-    // splice(index, 1) = xoá 1 phần tử ở vị trí index ra khỏi mảng
-    cart.splice(index, 1);
+function xoaSanPham(i) {
+    cart.splice(i, 1);
     saveCart();
 }
 

@@ -1,11 +1,10 @@
-// Lấy tất cả sản phẩm trong Firestore, rồi chọn ngẫu nhiên 6 cái cho mục "Hàng Hot"
 db.collection("products")
     .get()
-    .then((snapshot) => {
+    .then((gg) => {
 
         let products = [];
 
-        snapshot.forEach((doc) => {
+        gg.forEach((doc) => {
             products.push(doc.data());
         });
 

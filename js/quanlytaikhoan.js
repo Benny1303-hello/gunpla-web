@@ -1,6 +1,4 @@
-// null = chưa chọn tài khoản nào, có giá trị = đang sửa tài khoản có id đó
 let editingId = null;
-let myId = null;
 
 auth.onAuthStateChanged((user) => {
     if (!user) {
@@ -9,7 +7,6 @@ auth.onAuthStateChanged((user) => {
         return;
     }
 
-    myId = user.uid;
 
     // Chỉ admin (role_id = 1) mới được vào trang này
     db.collection("users").doc(user.uid).get().then((doc) => {
@@ -31,11 +28,11 @@ auth.onAuthStateChanged((user) => {
 function loadUsers() {
     db.collection("users")
         .get()
-        .then((snapshot) => {
+        .then((gg) => {
             const tableBody = document.getElementById("user-table-body");
             tableBody.innerHTML = "";
 
-            snapshot.forEach((doc) => {
+            gg.forEach((doc) => {
                 let u = doc.data();
 
                 let roleName = "Khách hàng";
@@ -99,12 +96,6 @@ function saveUser() {
 
     let newRole = Number(document.getElementById("role").value);
 
-    // Không cho admin tự hạ quyền của chính mình (tránh mất quyền admin)
-    if (editingId === myId && newRole !== 1) {
-        alert("Bạn không thể tự bỏ quyền Admin của chính mình");
-        return;
-    }
-
     let thongTinMoi = {
         username: document.getElementById("username").value.trim(),
         fullName: document.getElementById("fullName").value.trim(),
@@ -135,5 +126,5 @@ function clearForm() {
     document.getElementById("role").value = "2";
 
     editingId = null;
-    document.getElementById("hint").textContent = "Bấm nút \"Sửa\" ở bảng bên dưới để chọn 1 tài khoản.";
+    document.getElementById("hint").textContent = "Bấm nút sửa ở bảng bên dưới để chọn 1 tài khoản.";
 }

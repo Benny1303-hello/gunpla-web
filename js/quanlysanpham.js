@@ -7,7 +7,7 @@ auth.onAuthStateChanged((user) => {
         return;
     }
 
-    // Chỉ admin (role_id = 1) mới được vào trang này
+    // Chỉ admin role id mới được vào trang này
     db.collection("users").doc(user.uid).get().then((doc) => {
         let data = {};
         if (doc.exists) {
@@ -27,11 +27,11 @@ auth.onAuthStateChanged((user) => {
 function loadProducts() {
     db.collection("products")
         .get()
-        .then((fbtv) => {
+        .then((gg) => {
             const tableBody = document.getElementById("product-table-body");
             tableBody.innerHTML = "";
 
-            fbtv.forEach((doc) => {
+            gg.forEach((doc) => {
                 let product = doc.data();
 
                 const row = `

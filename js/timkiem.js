@@ -1,6 +1,6 @@
 const keyword = sessionStorage.getItem("searchKeyword") || "";
 
-document.getElementById("search-title").textContent = "Kết quả tìm kiếm cho: " + keyword +"" ;
+document.getElementById("search-title").textContent = "Kết quả tìm kiếm cho: " + keyword;
 
 function removeVietnameseSigns(str) {
     return str
@@ -14,8 +14,8 @@ let products = [];
 
 db.collection("products")
     .get()
-    .then((fbtv) => {
-        fbtv.forEach((doc) => {
+    .then((gg) => {
+        gg.forEach((doc) => {
             let data = doc.data();
             let product = {
                 id: doc.id,

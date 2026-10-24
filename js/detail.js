@@ -1,11 +1,8 @@
-// Lấy ID và loại (HG/RG/MG) của sản phẩm đang xem từ <body data-id="..." data-title="...">
+
 const currentId = document.body.dataset.id;
-const currentTitle = document.body.dataset.title;
+const currentTitle = document.body.dataset.title;                         
 
 
-// ===================== GIÁ SẢN PHẨM =====================
-// Lấy giá thật từ Firestore rồi ghi đè lên giá viết sẵn trong HTML,
-// để admin sửa giá trong trang quản lý là trang chi tiết cũng đổi theo
 
 const priceBox = document.querySelector(".product-info .price");
 
@@ -13,13 +10,13 @@ if (priceBox) {
     db.collection("products").doc(currentId).get().then((doc) => {
         if (doc.exists) {
             let product = doc.data();
+            
             priceBox.textContent = Number(product.price).toLocaleString() + " VNĐ";
         }
     });
 }
 
 
-// ===================== NÚT MUA HÀNG =====================
 
 const addCartBtn = document.getElementById("add-cart");
 const buyNowBtn = document.getElementById("buy-now");
@@ -36,8 +33,7 @@ if (buyNowBtn) {
     };
 }
 
-// chuyenTrang = true: thêm xong thì chuyển sang trang giỏ hàng (nút "Mua Ngay")
-// chuyenTrang = false: thêm xong thì chỉ báo thông báo (nút "Thêm vào giỏ hàng")
+
 function themVaoGio(chuyenTrang) {
     const user = auth.currentUser;
 
@@ -47,7 +43,6 @@ function themVaoGio(chuyenTrang) {
         return;
     }
 
-    // Bước 1: lấy thông tin sản phẩm đang xem từ Firestore
     db.collection("products").doc(currentId).get().then((productDoc) => {
 
         if (!productDoc.exists) {
@@ -57,7 +52,6 @@ function themVaoGio(chuyenTrang) {
 
         let product = productDoc.data();
 
-        // Bước 2: lấy giỏ hàng hiện tại của user
         db.collection("users").doc(user.uid).get().then((userDoc) => {
 
             let cart = [];
@@ -65,7 +59,6 @@ function themVaoGio(chuyenTrang) {
                 cart = userDoc.data().cart;
             }
 
-            // Bước 3: nếu sản phẩm đã có trong giỏ thì tăng số lượng, chưa có thì thêm mới
             let daCo = false;
 
             for (let i = 0; i < cart.length; i++) {
@@ -85,7 +78,6 @@ function themVaoGio(chuyenTrang) {
                 });
             }
 
-            // Bước 4: lưu giỏ hàng mới lên Firestore
             db.collection("users").doc(user.uid).set({ cart: cart }, { merge: true })
                 .then(() => {
                     if (chuyenTrang) {
@@ -102,21 +94,18 @@ function themVaoGio(chuyenTrang) {
 }
 
 
-// ===================== SẢN PHẨM LIÊN QUAN =====================
-
 const relatedBox = document.querySelector(".related-products");
 
-// Trang nào không có khung "sản phẩm liên quan" thì bỏ qua phần này
 if (relatedBox) {
     db.collection("products")
         .where("title", "==", currentTitle)
         .limit(4)
         .get()
-        .then((snapshot) => {
+        .then((gg) => {
 
             relatedBox.innerHTML = "";
 
-            snapshot.forEach((doc) => {
+            gg.forEach((doc) => {
 
                 let product = doc.data();
 

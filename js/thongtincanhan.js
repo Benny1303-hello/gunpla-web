@@ -14,7 +14,6 @@ auth.onAuthStateChanged((user) => {
             data = doc.data();
         }
 
-        // Có họ tên thì dùng họ tên, chưa có thì tạm dùng username lúc đăng ký
         let hoTen = "";
         if (data.fullName) {
             hoTen = data.fullName;
@@ -27,14 +26,14 @@ auth.onAuthStateChanged((user) => {
         document.getElementById("address").value = data.address || "";
 
         // role_id = 1 là admin, role_id = 2 là khách hàng
-        if (data.role_id === 1) {
-            document.getElementById("role-label").textContent = "Quyền: Quản trị viên (Admin)";
-            document.getElementById("admin-area").style.display = "block";
-            loadAllUsers();
-        } else {
-            document.getElementById("role-label").textContent = "Quyền: Khách hàng";
-        }
-    });
+            if (data.role_id === 1) {
+                document.getElementById("role-label").textContent = "Quyền: Quản trị viên (Admin)";
+                document.getElementById("admin-area").style.display = "block";
+                loadAllUsers();
+            } else {
+                document.getElementById("role-label").textContent = "Quyền: Khách hàng";
+            }
+        });
 
     document.getElementById("saveBtn").onclick = function () {
         let fullName = document.getElementById("fullName").value;
@@ -57,11 +56,11 @@ auth.onAuthStateChanged((user) => {
 function loadAllUsers() {
     db.collection("users")
         .get()
-        .then((snapshot) => {
+        .then((gg) => {
             const tableBody = document.getElementById("user-table-body");
             tableBody.innerHTML = "";
 
-            snapshot.forEach((doc) => {
+            gg.forEach((doc) => {
                 let u = doc.data();
 
                 let roleName = "Khách hàng";

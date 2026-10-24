@@ -1,4 +1,3 @@
-// Lấy từ Firebase Console > Project settings > Your apps > SDK setup and configuration
 const firebaseConfig = {
   apiKey: "AIzaSyAF8zRYrtCTJGh0xMHJ2rLsC-15-ohalkg",
   authDomain: "gunpla-f5338.firebaseapp.com",

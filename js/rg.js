@@ -1,14 +1,13 @@
-// Chỉ lấy những sản phẩm có title = "RG" trong Firestore
 db.collection("products")
     .where("title", "==", "RG")
     .get()
-    .then((snapshot) => {
+    .then((gg) => {
 
         const productGrid = document.querySelector(".filterable_cards");
 
         productGrid.innerHTML = "";
 
-        snapshot.forEach((doc) => {
+        gg.forEach((doc) => {
 
             let product = doc.data();
 

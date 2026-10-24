@@ -25,7 +25,6 @@ form.addEventListener("submit", (event) => {
   } else if (password !== confirmPassword) {
     alert("Passwords do not match!");
   } else {
-    // Bước 1: tạo tài khoản đăng nhập trên Firebase Authentication
     auth.createUserWithEmailAndPassword(email, password)
       .then((credential) => {
         let user = credential.user;
